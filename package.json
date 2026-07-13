@@ -1,0 +1,18 @@
+{
+  "name": "siyam-ahmed-portfolio",
+  "version": "1.0.0",
+  "description": "Siyam Ahmed - Personal Portfolio | ICT Student at MBSTU",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && git add dist/ && git commit -m 'Deploy build' && git push"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "keywords": ["portfolio", "personal-website", "siyam-ahmed", "mbstu", "ict"],
+  "author": "Siyam Ahmed <monirojjamanayoive204@gmail.com>",
+  "license": "MIT"
+}
