@@ -150,15 +150,13 @@
 
         /* ========== SECTION STYLES ========== */
         .content-section {
-            display: none;
-            animation: fadeUp 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
         .content-section.visible {
-            display: block;
-        }
-        @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .section-header {
@@ -778,7 +776,7 @@
             z-index: 999;
             box-shadow: var(--shadow-glass);
         }
-        .custom-toast.show {
+        .custom-toast.active {
             transform: translateY(0);
             opacity: 1;
         }
@@ -796,7 +794,7 @@
                 height: 100vh;
                 border-radius: 0 20px 20px 0;
             }
-            .sidebar.open {
+            .sidebar.active {
                 transform: translateX(0);
             }
             .main-content {
@@ -869,6 +867,7 @@
                     <li class="nav-item" data-tab="about"><a href="#about"><i class="fas fa-user"></i>About Me</a></li>
                     <li class="nav-item" data-tab="skills-projects"><a href="#skills-projects"><i class="fas fa-code"></i>Skills & Projects</a></li>
                     <li class="nav-item" data-tab="gallery"><a href="#gallery"><i class="fas fa-images"></i>Gallery</a></li>
+                    <li class="nav-item" data-tab="social"><a href="#social"><i class="fas fa-share-nodes"></i>Social Media</a></li>
                     <li class="nav-item" data-tab="contact"><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
                 </ul>
             </nav>
@@ -995,4 +994,195 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="skills-subsection-title"><i class="fas fa-globe"></i> Web & Mobile</
+                        <h3 class="skills-subsection-title"><i class="fas fa-globe"></i> Web &amp; Mobile</h3>
+                        <div class="skills-grid">
+                            <span class="skill-card"><i class="fab fa-html5 skill-icon" style="color:#E34F26;"></i> HTML</span>
+                            <span class="skill-card"><i class="fab fa-css3-alt skill-icon" style="color:#1572B6;"></i> CSS</span>
+                            <span class="skill-card"><span class="skill-icon" style="color:#092E20;font-weight:bold;">Dj</span> Django (Python)</span>
+                            <span class="skill-card"><i class="fab fa-android skill-icon" style="color:#3DDC84;"></i> Android (Java)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top:2.5rem;">
+                    <h3 class="skills-subsection-title"><i class="fas fa-folder-open"></i> Projects</h3>
+                    <div class="projects-grid">
+                        <div class="glass-card project-card">
+                            <div class="project-icon-wrapper"><i class="fas fa-user-graduate"></i></div>
+                            <h4 class="project-title">Student Management System</h4>
+                            <p class="project-description">
+                                A comprehensive application for streamlining administrative tasks and managing
+                                student records — structured data handling and an intuitive interface for real
+                                academic workflows.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Software Design</span>
+                                <span class="tag">Data Handling</span>
+                            </div>
+                        </div>
+                        <div class="glass-card project-card">
+                            <div class="project-icon-wrapper"><i class="fas fa-wallet"></i></div>
+                            <h4 class="project-title">Expense Tracker Application</h4>
+                            <p class="project-description">
+                                A personal finance web app built with HTML, CSS, and JavaScript to help track
+                                daily spending and manage budgets — a practical, accessible tool for everyday use.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALLERY -->
+            <section class="content-section" id="gallery">
+                <div class="section-header">
+                    <span class="section-subtitle">Beyond the Code</span>
+                    <h2 class="section-title">Gallery</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-card" data-title="Cox's Bazar &amp; Saint Martin, 2021">
+                        <img class="gallery-image" src="https://sites.google.com/sitesv-images-rt/ACHe0d1hfmJG1jx4pG9raRZOG2cRtA8EqSCUiP0N07W-8JodrGYd5yU35kxBO859zj4kFbxJCMfMgL-RrekvkrzH_YbLAUa5mCNDvxxe2E0LC3bmMr7JYWqYumPcFa90y3M7acr9T0JJtXD7lc0TCYyF0BZ2XPYLGrO93cRI4_wLNLT19yIe9S-IoG6UIDIQ=w1280" alt="Cox's Bazar and Saint Martin, 2021" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-card-tag">Travel</span>
+                            <p class="gallery-card-title">Cox's Bazar &amp; Saint Martin, 2021</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card" data-title="ICT">
+                        <img class="gallery-image" src="https://sites.google.com/sitesv-images-rt/ACHe0d36ns-AP1ZmemZ1k2rW40lb-lkFu1j-nW__kPzO94DkSuW4h9fE-0Tt95afKn3E9-xoFdAIQQVLNzf6PhL8Ua3iov9uQ30xSj6GwzGNFClKGHcw66S5iEO8IBzyLbzPiE7LszvG-eUvWRXSfWD_FqeqrFlHBYc8N-Z7xvPk2GhObKi28l7btqxuDB2Owu9PQbqmN__25mKbZFn-0GMQyhLAK0faioZcW59v0gzXybo=w1280" alt="ICT" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-card-tag">Campus</span>
+                            <p class="gallery-card-title">ICT</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card" data-title="Photography">
+                        <img class="gallery-image" src="https://sites.google.com/sitesv-images-rt/ACHe0d1003v58YpprzPwKmFPA_SuCRgvWYy9fxllyaEMTVHQhn6is0JzP5o4pRhY2y4mQuTLjB5GRpsvIKQDto1TvdbrbPlzv-ltRuKKfEC9FKZdh-PgfqHz0BTGl5s9tlpvXzXuAPtV4gzY0MPjeZ_nWJCW7cL4W7dBtCUy4c-cKXzScwglriRq1EQm8OVco3FoAcCP06j01howQkoFZ4VlVtRaNF7OFX39jC1muwci=w1280" alt="Photography" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-card-tag">Hobby</span>
+                            <p class="gallery-card-title">Photography</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOCIAL MEDIA -->
+            <section class="content-section" id="social">
+                <div class="section-header">
+                    <span class="section-subtitle">Let's Connect</span>
+                    <h2 class="section-title">Social Media</h2>
+                </div>
+                <div class="social-grid">
+                    <a href="https://www.facebook.com/siyam.ahmed.557029" target="_blank" rel="noopener" class="glass-card social-card">
+                        <div class="social-icon-wrapper"><i class="fab fa-facebook"></i></div>
+                        <h4 class="social-name">Facebook</h4>
+                        <span class="social-status">siyam.ahmed.557029</span>
+                    </a>
+                    <a href="https://codeforces.com/profile/siyamahmed001" target="_blank" rel="noopener" class="glass-card social-card">
+                        <div class="social-icon-wrapper"><i class="fas fa-code"></i></div>
+                        <h4 class="social-name">Codeforces</h4>
+                        <span class="social-status">siyamahmed001</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class="content-section" id="contact">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info-list">
+                        <div class="glass-card contact-info-card">
+                            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-card-details">
+                                <span>Phone Number</span>
+                                <h5>+8801581499808</h5>
+                            </div>
+                            <button class="copy-btn" data-copy="+8801581499808" title="Copy Phone Number" aria-label="Copy Phone">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="glass-card contact-info-card">
+                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-card-details">
+                                <span>Email Address</span>
+                                <h5>siyamahmad101@gmail.com</h5>
+                            </div>
+                            <button class="copy-btn" data-copy="siyamahmad101@gmail.com" title="Copy Email Address" aria-label="Copy Email">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <p class="contact-quote">
+                            &ldquo;Feel free to reach out to me on any platform &ndash; I'd love to connect with you.&rdquo;
+                        </p>
+                    </div>
+
+                    <div class="glass-card contact-form-wrapper">
+                        <h3 class="skills-subsection-title"><i class="fas fa-paper-plane"></i> Quick Message</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="e.g. John Doe" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="e.g. john@example.com" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                                <i class="fas fa-paper-plane btn-icon"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="quick-links-section">
+                    <div class="glass-card quick-link-card" data-goto="about">
+                        <div class="quick-link-icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="quick-link-info"><h4>More About Me</h4><p>Education, courses, details</p></div>
+                    </div>
+                    <div class="glass-card quick-link-card" data-goto="skills-projects">
+                        <div class="quick-link-icon"><i class="fas fa-folder-open"></i></div>
+                        <div class="quick-link-info"><h4>My Projects</h4><p>Software work &amp; codebase</p></div>
+                    </div>
+                    <div class="glass-card quick-link-card" data-goto="gallery">
+                        <div class="quick-link-icon"><i class="fas fa-photo-film"></i></div>
+                        <div class="quick-link-info"><h4>See Gallery</h4><p>Travels &amp; photography</p></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox"><i class="fas fa-xmark"></i></button>
+        <div class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></div>
+        <div class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></div>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <h4 class="lightbox-title" id="lightboxTitle">Image Details</h4>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="custom-toast" id="toast">
+        <i class="fas fa-circle-check toast-icon"></i>
+        <span class="toast-text" id="toastText">Text copied to clipboard</span>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- App Script -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
